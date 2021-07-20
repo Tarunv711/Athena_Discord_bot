@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kgeECwG2V00hZzUnuJVF6k2qgkpLyUH85PqTXpgsOIa10Na3/LhYJPMwEyTw6cH/bdFOsz42dFqheok5SvYgFg==",
+  "success": true,
+  "projectFilePath": "/Users/tarunv711/Documents/Athena-Bot/DiscordBot/DiscordBot/DiscordBot.csproj",
+  "expectedPackageFiles": [
+    "/Users/tarunv711/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
