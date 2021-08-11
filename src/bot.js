@@ -6,58 +6,14 @@ const { Client } = require('discord.js');
 
 const client = new Client();
 
-//const channel = client.channels.cache.get(`${message.channel.id}`);
+const channel = client.channels.cache.get(`864900707392159747`);
 
 client.on('ready', () =>{
     console.log(`${client.user.tag} has logged in. `);
 } );
 
-client.on('message', (message) =>{
-    console.log(`[${message.author.tag}]: ${message.content}`);
-    if(message.content == 'hello'){
-        const exampleEmbed = new Discord.MessageEmbed()
-        .setTitle('Some title')
-        .setURL('https://www.youtube.com/watch?v=O7ulUVts3wI')
-        //.setImage('https://qa--athenaviewer.netlify.app/prompts/1374a555-75dd-40ff-929f-7727ddf85218')
-        .addFields({
-            video: {
-                url: 'https://www.youtube.com/watch?v=O7ulUVts3wI',
-                proxyURL: 'https://www.youtube.com/watch?v=O7ulUVts3wI',
-                height: 500,
-                width: 500,
-            }
-            }
-        )
-        .setTimestamp();
-    
-        
-        message.channel.send(exampleEmbed);
-    }
-} );
 
-client.on('message', (message) =>{
-    console.log(`[${message.author.tag}]: ${message.content}`);
-    if(message.content == 'vid'){
-        const emb = {
-            type: `video`,
-            title: 'Some title',
-            url: 'https://qa--athenaviewer.netlify.app/prompts/1374a555-75dd-40ff-929f-7727ddf85218',
 
-            
-            image: {
-                url: 'https://www.youtube.com/watch?v=O7ulUVts3wI',
-                proxyURL: 'https://www.youtube.com/watch?v=O7ulUVts3wI',
-                height: 500,
-                width: 500,
-            },
-                
-            //timestamp: new Date()
-            
-
-        }
-        message.channel.send({embed: emb});
-    }
-        });
 
         let gif = new Discord.MessageEmbed() 
         .setColor(0x000000)
@@ -75,7 +31,7 @@ client.on('message', (message) =>{
                 console.log(message.id);
                 //const channel  = new ThreadChannel
                 
-                const thread = message.channel.threads.create({
+                const thread = channel.threads.create({
                     name: `${user.id}'s Athena Prompt Thread`,
                     autoArchiveDuration: 1440,
                     type: 'private_thread',
